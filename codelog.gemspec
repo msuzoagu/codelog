@@ -19,13 +19,13 @@ Gem::Specification.new do |spec|
   spec.executables   = ['codelog']
   spec.require_paths = ['lib']
   spec.post_install_message = 'To start using the codelog run `codelog setup` and fill the `template.yml` file'
-  spec.required_ruby_version = ">= 2.1.10"
+  spec.required_ruby_version = "~> 3.2.2"
 
-  spec.add_runtime_dependency "thor", "~> 1.0"
+  spec.add_runtime_dependency "thor", "~> 1.2"
 
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.4"
-  spec.add_development_dependency "rubocop", "~> 0.52.1"
+  spec.add_development_dependency "bundler", "~> 2.4.10"
+  spec.add_development_dependency "rake", "~> 13.0.6"
+  spec.add_development_dependency "rspec", "~> 3.12.0"
+  spec.add_development_dependency "rubocop", "~> 1.54.1"
   spec.add_development_dependency "simplecov"
 end
