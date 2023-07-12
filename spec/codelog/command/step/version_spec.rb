@@ -39,6 +39,7 @@ describe Codelog::Command::Step::Version do
       allow_any_instance_of(described_class).to receive(:config_file_exists?) { true }
     end
 
+    # Todo: Fix Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name => spell_checker)' has been deprecated
     context "within normal run" do
       before :each do
         allow(File).to receive(:file?).and_return(false)
@@ -49,7 +50,7 @@ describe Codelog::Command::Step::Version do
 
       it 'merges the content of the files with the same category' do
         expect(subject).to receive(:generate_changelog_content_from)
-          .with('Category_1' => ['value_1', 'value_2', { 'Subcategory_1' => 'value_3' }])
+          .with({ 'Category_1' => ['value_1', 'value_2', { 'Subcategory_1' => 'value_3' }] })
         subject.run
       end
 
