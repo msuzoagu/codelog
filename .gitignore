@@ -13,3 +13,6 @@
 
 # rspec failure tracking
 .rspec_status
+
+# using chruby thus need ruby-version
+.ruby-version
